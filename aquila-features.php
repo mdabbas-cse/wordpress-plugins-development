@@ -15,3 +15,22 @@
  * Text Domain:       aquila-features
  * Domain Path:       /languages
  */
+
+use AquilaFeatures\Plugin;
+
+require_once __DIR__ . '/vendor/autoload.php';
+
+if (!defined('ABSPATH')) {
+  exit;
+}
+
+if (class_exists('AquilaFeatures\\Plugin')) {
+  $the_plugin = new Plugin();
+}
+
+
+// add plugin activation hook
+register_activation_hook(__FILE__, [$the_plugin, 'activate']);
+
+// add plugin deactivation hook
+register_deactivation_hook(__FILE__, [$the_plugin, 'deactivate']);
