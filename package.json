@@ -12,7 +12,11 @@
     "lint:fix": "eslint --fix assets/src/js/*",
     "lint-css": "stylelint 'assets/src/sass/**/*.scss'",
     "lint-css:fix": "npm run lint-css -- --fix",
-    "precommit": "npm run lint-css:fix && npm run lint:fix && npm run prod"
+    "precommit": "npm run lint-css:fix && npm run lint:fix && npm run prod",
+    "lint:php": "vendor/bin/phpcs",
+    "lint:php:fix": "vendor/bin/phpcbf --standard=phpcs.xml",
+    "clean": "rm -rf node_modules/ && rm -rf vendor/ && rm -rf composer.lock && rm -rf package-lock.json",
+    "dev-setup": "npm run clean && npm install --force && composer install && npm run prod"
   },
   "keywords": [
     "wordpress",
