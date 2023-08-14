@@ -39,6 +39,10 @@ class Plugin
     define('AQUILA_FEATURES_PLUGIN_BUILD_URL', AQUILA_FEATURES_PLUGIN_URL . '/assets/build');
     define('AQUILA_FEATURES_PLUGIN_VERSION', '1.0.0');
 
+    require_once AQUILA_FEATURES_PLUGIN_PATH . '/inc/custom-functions.php';
+
     new Assets();
+
+    new Patterns();
   }
 }
