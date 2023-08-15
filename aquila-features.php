@@ -1,4 +1,3 @@
-<!-- https://downloadlynet.ir/2023/15/93532/03/creating-wordpress-plugins-the-right-way/11/?#/93532-udemy-112323082813.html -->
 <?php
 
 /*
@@ -36,3 +35,5 @@ register_activation_hook(__FILE__, [$the_plugin, 'activate']);
 
 // add plugin deactivation hook
 register_deactivation_hook(__FILE__, [$the_plugin, 'deactivate']);
+
+//https://downloadlynet.ir/2023/15/93532/03/creating-wordpress-plugins-the-right-way/11/?#/93532-udemy-112323082813.html -->
